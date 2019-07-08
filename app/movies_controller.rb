@@ -20,8 +20,11 @@ def can_be_created_with_a_hash_of_attributes
       in_theaters: false
   }
   movie = Movie.new
-   movie.title = hash[:title]
-    movie.release_date = hash[:release_date]
+   movie.title = attributes[:title]
+    movie.release_date = attributes[:release_date]
+    movie.director = attributes[:director]
+    movie.lead = attributes[:lead]
+    movie.in_theaters = attributes[:in_theaters]
     movie.save 
 end
 
