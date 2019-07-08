@@ -11,8 +11,7 @@ def can_be_instantiated_and_then_saved
   movie.save 
 end
 
-def can_be_created_with_a_hash_of_attributes
-  # Initialize movie and then and save it
+def can_be_created_with_a_hash_of_attributes(hash)
   attributes = {
       title: "The Sting",
       release_date: 1973,
@@ -20,15 +19,16 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = __
+  movie = Movie.new
+   movie.title[:title]
+    m.release_date[:release_date]
+    m.save 
 end
 
 def can_be_created_in_a_block(args = {:title => "Home Alone", :release_date => 1990})
   
   Movie.create do |m|
-    m.title[:title]
-    m.release_date[:release_date]
-    m.save 
+   
   end
 end
 
